@@ -54,5 +54,8 @@ def suggest():
     suggestions = movies[movies['title'].str.lower().str.contains(query)].head(10)
     return jsonify({'suggestions': suggestions['title'].tolist()})
 
+import os
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host='0.0.0.0', port=port)
