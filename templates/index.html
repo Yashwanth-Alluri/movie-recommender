@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <link href="/static/css/styles.css" rel="stylesheet"> <!-- Link CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Movie Recommendation System</h1>
+        <p>Enter a movie name to get personalized recommendations!</p>
+        <div class="input-group mb-3 position-relative">
+            <input type="text" id="movieInput" class="form-control" placeholder="Enter a movie name" onkeyup="fetchSuggestions()">
+            <button class="btn btn-primary" onclick="getRecommendations()">Get Recommendations</button>
+            <ul id="suggestions" class="list-group position-absolute w-100" style="z-index: 1000; display: none;"></ul>
+        </div>
+        <div id="results"></div>
+    </div>
+    <script src="/static/js/scripts.js"></script> <!-- Link JS -->
+</body>
+</html>
